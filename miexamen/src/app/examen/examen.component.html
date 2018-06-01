@@ -1,3 +1,18 @@
-<p>
-  examen works!
-</p>
+<h1>{{esEstreno}}</h1>
+
+<div class="sa-fondo-examen sa-color-letras-deber-peliculas"
+     [style.background-image]="'url('+urlImagen+')'"
+
+
+>
+  <div class="sa-espaciado"></div>
+
+
+  <p
+    (click)="hizoClickEnEstado()"
+    [class]="'sa-fondo-estado ' + claseEstreno">{{textoEstreno}}</p>
+
+
+  <h1>{{nombrePelicula}}</h1>
+  <p>{{descripcionPelicula}}</p>
+</div>

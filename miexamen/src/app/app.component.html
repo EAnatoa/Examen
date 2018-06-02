@@ -6,68 +6,130 @@
 
 <div class="row" >
 
-  <div class="col-sm-6" >
 
-      <form class="example-form" *ngFor=" ">
+  <div class="col-sm-6" align="center">
 
-
-        <p>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Nombres" value=" ">
-          </mat-form-field>
-        </p>
-
-        <p>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Apellido" value=" ">
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Fecha de Nacimiento" value=" ">
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Numero de Medallas" value=" ">
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Campeon Actual" value=" ">
-          </mat-form-field>
-        </p>
+    <p-carousel headerText="Ultimas peliculas agregadas" [value]="arregloPeliculasAgregadas">
+      <ng-template let-examens pTemplate="item">
 
 
-      </form>
+        <app-examen
 
+          [urlImagen]="examens.urlImagen"
 
+        >
+
+        </app-examen>
+
+      </ng-template>
+    </p-carousel>
 
 
   </div>
 
+  <div class="col-sm-6" align="center">
 
-  <div class="row">
+    <form class="example-form" >
+
+      <h3> MAESTRO POKEMON </h3>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombres" value=" ">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellido" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Fecha de Nacimiento" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Numero de Medallas" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Campeon Actual" value=" ">
+        </mat-form-field>
+      </p>
 
 
-    <div class="col-sm-1" >
+    </form>
 
+    <div class="button-row">
 
-      <p-carousel headerText="Ultimas peliculas agregadas" [value]="arregloPeliculasAgregadas" [style]="{'width':'1000px'}">
-        <ng-template let-examens pTemplate="item">
+      <button mat-raised-button color="primary">Limpiar</button>
 
+      <button mat-raised-button color="accent">Crear</button>
 
-          <app-examen
-
-            [urlImagen]="examens.urlImagen"
-
-          >
-
-          </app-examen>
-
-        </ng-template>
-      </p-carousel>
     </div>
 
   </div>
+</div>
+
+
+
+
+
+<div class="row" >
+
+
+  <div class="col-sm-6" align="center">
+
+    <form class="example-form" >
+
+      <h3> POKEMON </h3>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombres" value=" ">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellido" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Fecha de Nacimiento" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Numero de Medallas" value=" ">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Campeon Actual" value=" ">
+        </mat-form-field>
+      </p>
+
+
+    </form>
+
+    <div class="button-row">
+
+      <button mat-raised-button color="primary">Limpiar</button>
+
+      <button mat-raised-button color="accent">Crear</button>
+
+    </div>
+  </div>
+
+  <div class="col-sm-6" align="center">
+
+    <p-card>
+      Content
+    </p-card>
+
+  </div>
+</div>
 

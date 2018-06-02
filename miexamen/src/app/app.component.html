@@ -2,35 +2,46 @@
   <p> Examen Primer Bimestre</p>
 
 </h2>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Nombres" value=" ">
-  </mat-form-field>
-
- <p>
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Apellidos"></textarea>
-  </mat-form-field>
- </p>
-</form>
 
 
-<div class="row">
+<div class="row" >
+
+  <div class="col-sm-6" >
+
+      <form class="example-form" *ngFor=" ">
 
 
-  <div class="col-sm-6 text-center"
-       *ngFor="let examens of arregloPrimeraParte">
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nombres" value=" ">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Apellido" value=" ">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Fecha de Nacimiento" value=" ">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Numero de Medallas" value=" ">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Campeon Actual" value=" ">
+          </mat-form-field>
+        </p>
 
 
-    <app-examen
-      [descripcionPelicula]="examens.descripcion"
-      [nombrePelicula]="examens.nombre"
-      [esEstreno]="examens.esEstreno"
-      [urlImagen]="examens.urlImagen"
+      </form>
 
-    >
 
-    </app-examen>
 
 
   </div>

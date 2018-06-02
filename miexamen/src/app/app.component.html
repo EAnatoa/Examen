@@ -9,20 +9,24 @@
 
   <div class="col-sm-6" align="center">
 
-    <p-carousel headerText="Ultimas peliculas agregadas" [value]="arregloPeliculasAgregadas">
-      <ng-template let-examens pTemplate="item">
-
-
-        <app-examen
-
-          [urlImagen]="examens.urlImagen"
-
-        >
-
-        </app-examen>
-
+    <ngb-carousel >
+      <ng-template ngbSlide>
+        < alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>10 seconds between slides...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
       </ng-template>
-    </p-carousel>
+
+      <ng-template ngbSlide>
+        < alt="ffffffffffffff">
+        <div class="carousel-caption">
+          <h3>10 seconds between slides...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+
+    </ngb-carousel>
 
 
   </div>
@@ -85,44 +89,48 @@
     <form class="example-form" >
 
       <h3> POKEMON </h3>
-      <p>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Nombres" value=" ">
-        </mat-form-field>
-      </p>
 
-      <p>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Apellido" value=" ">
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Fecha de Nacimiento" value=" ">
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Numero de Medallas" value=" ">
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Campeon Actual" value=" ">
-        </mat-form-field>
-      </p>
+
+      <h5 class="first">Numero Pokemon</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Nombre Pokemon</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Poder Especial Uno</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Poder Especial Dos</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Fecha Captura</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Fecha nivel</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+
+      <h5 class="first">Entrenador</h5>
+      <input id="input" type="text" size="20" pInputText [(ngModel)]="text">
+      <span id="text">{{text}}</span>
+<br>
+      <br>
+
+      <p-button label="Limpiar" ></p-button>
+      <p-button label="Crear" ></p-button>
 
 
     </form>
 
-    <div class="button-row">
 
-      <button mat-raised-button color="primary">Limpiar</button>
-
-      <button mat-raised-button color="accent">Crear</button>
-
-    </div>
   </div>
+
+
 
   <div class="col-sm-6" align="center">
 
@@ -131,5 +139,6 @@
     </p-card>
 
   </div>
+
 </div>
 

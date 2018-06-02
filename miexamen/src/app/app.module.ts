@@ -14,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 import {CardModule} from 'primeng/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {InputTextModule} from 'primeng/inputtext';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CarouselModule,
     MatInputModule,
     MatBadgeModule,
-    CardModule
+    CardModule,
+    InputTextModule
 
 
   ], //  Definimos todos los Modulos

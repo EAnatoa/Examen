@@ -1,23 +1,25 @@
-<h2 align="right">
-  <p> Musica   &#x2502;  Audio Latino   &#x2502; Facebook&#x2502;  Twitter &#x2502; Ingresar</p>
+<h2 align="center">
+  <p> Examen Primer Bimestre</p>
 
 </h2>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombres" value=" ">
+  </mat-form-field>
 
-<h1>
-  Peliculas ONLINE
-
-  <img src="https://www.cinemascomics.com/wp-content/uploads/2017/11/cine-de-superheroes-2018.jpg"  width="500" height="100"
-       class="img-responsive">
-  >
-</h1>
-
+ <p>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Apellidos"></textarea>
+  </mat-form-field>
+ </p>
+</form>
 
 
 <div class="row">
 
 
   <div class="col-sm-6 text-center"
-       *ngFor="let examens of arregloPeliculas">
+       *ngFor="let examens of arregloPrimeraParte">
 
 
     <app-examen
@@ -25,38 +27,14 @@
       [nombrePelicula]="examens.nombre"
       [esEstreno]="examens.esEstreno"
       [urlImagen]="examens.urlImagen"
-      (dioClickEnEstado)="alertar()"
-
 
     >
 
     </app-examen>
 
-    <button (click)="examens.nombre = 'Erika'"> Cambiar es estreno</button>
-  </div>
-
-
-
-
-  <div class="row">
-
-    <div class="col-sm-3 "
-         *ngFor="let examens of arregloPeliculasSecundarias">
-
-
-      <app-examen
-
-        [nombrePelicula]="examens.nombre"
-        [esEstreno]="examens.esEstreno"
-        [urlImagen]="examens.urlImagen"
-
-      >
-
-      </app-examen>
-
-    </div>
 
   </div>
+
 
   <div class="row">
 
@@ -82,42 +60,3 @@
 
   </div>
 
-  <div class="row" >
-
-
-    <div class="col-sm-1 " >
-      <p-carousel headerText="Ultimas series agregadas" [value]="arregloSeriesAgregadas" >
-        <ng-template let-examens pTemplate="item">
-          <app-examen
-
-            [urlImagen]="examens.urlImagen"
-
-          >
-
-          </app-examen>
-        </ng-template>
-      </p-carousel>
-    </div>
-  </div>
-
-
-
-  <div class="row">
-
-
-    <div class="col-sm-1 "  >
-
-      <p-carousel headerText="Ultimas capitulos agregadas" [value]="arregloUltimosAgredados"  >
-        <ng-template let-examens pTemplate="item">
-          <app-examen
-
-            [urlImagen]="examens.urlImagen"
-
-          >
-
-          </app-examen>
-        </ng-template>
-      </p-carousel>
-
-    </div>
-  </div>

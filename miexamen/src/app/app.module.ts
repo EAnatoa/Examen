@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material';
 import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {CarouselModule} from 'primeng/carousel';
+import {MatInputModule} from '@angular/material/input';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -28,7 +29,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ButtonModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    CarouselModule
+    CarouselModule,
+    MatInputModule
 
   ], //  Definimos todos los Modulos
   providers: [], // Los Servicios

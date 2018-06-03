@@ -1,7 +1,4 @@
-.sa-fondo-examen{
-  background-color: #000000;
-  border-style: solid;
-  border-color: #000000;
+.sa-cabecera{
   border-width: 10px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,30 +8,7 @@
   filter: grayscale(34%);
   width: 600px;
   height: 400px;
-
 }
-
-.sa-color-letras-examen {
-  color: #fff
-}
-
-.sa-fondo-estado {
-  max-width: 120px;
-  text-align: center;
-}
-
-.sa-color-estado-amarillo {
-  background-color: #fabb00;
-}
-
-.sa-color-estado-rosado {
-  background-color: #e3003e;
-}
-
-.sa-espaciado {
-  height: 250px;
-}
-
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -44,10 +18,15 @@
 .example-full-width {
   width: 100%;
 }
-
+.sa-espaciado {
+  height: 250px;
+  width: 100px;
+}
+.sa-espaciado-w {
+  width: 100px;
+}
 .example-button-row {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-

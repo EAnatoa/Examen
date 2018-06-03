@@ -1,0 +1,47 @@
+<form class="example-form" >
+  <mat-form-field class="example-full-width" >
+    <input matInput placeholder="Nombres" name="nombres" id="nombres" [(ngModel)]="nombres" #textoNombres>
+  </mat-form-field>
+  <div class="sa-espaciado"></div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Apellidos" name="apellidos" [(ngModel)]="apellidos" #textoApellidos>
+  </mat-form-field>
+  <div class="sa-espaciado"></div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Fecha Nacimiento" name ="fechaNacimiento" [(ngModel)]="fechaNacimiento" #textoFechaNacimiento >
+  </mat-form-field>
+  <div class="sa-espaciado"></div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Numero de Medallas" name="numeroMedallas" [(ngModel)]="numeroMedallas" #textoMedallas>
+  </mat-form-field>
+  <div class="sa-espaciado"></div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Campeon actual" value="" name ="campeonActual" [(ngModel)]="campeonActual" #textoCampeonActual>
+  </mat-form-field>
+</form>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="button-row">
+      <button (click)="limpiar(textoNombres.value, textoApellidos.value, textoFechaNacimiento.value, textoMedallas.value, textoCampeonActual.value)" mat-raised-button>Limpiar</button>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="button-row">
+      <button (click)="crearMaestro(textoNombres.value, textoApellidos.value, textoFechaNacimiento.value, textoMedallas.value, textoCampeonActual.value)" mat-raised-button>Crear</button>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="sa-espaciado"></div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <button (click)="colocarValor()" type="button" class="btn btn-lg btn-primary">
+     {{card}}
+    </button>
+  </div>
+</div>

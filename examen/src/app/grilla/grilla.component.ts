@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
-import {MaestroService} from "../maestro.service";
+import {Maestro, MaestroService} from "../maestro.service";
 
 @Component({
   selector: 'app-grilla',
@@ -19,16 +19,16 @@ export class GrillaComponent implements OnInit, OnChanges{
   @Input() urlImagen:string;
   @Input() valorBotonCrear='';
   contador:number;
+
   card:string;
+  arregloNuevo: Maestro[];
 
   constructor(private maestro:MaestroService) {
 
   }
 
-
-
   ngOnInit() {
-
+   // this.arregloNuevo= this.maestro.devolverArreglo();
   }
 
   ngOnChanges(propiedadesActualizadas) {
@@ -37,11 +37,14 @@ export class GrillaComponent implements OnInit, OnChanges{
 
   }
 
-  crearMaestro(nombresForm, apellidosForm, fechaForm, numeroAutosForm, licenciaForm){
-    this.maestro.anadirCondutores(nombresForm, apellidosForm, fechaForm, numeroAutosForm, licenciaForm, 1);
+  crearMaestro(nombresForm, apellidosForm, fechaForm, numeroMedallasForm, campeonActualForm){
+   this.maestro.anadirMaestro(nombresForm, apellidosForm, fechaForm, numeroMedallasForm, campeonActualForm, 1);
 
-    console.log(this.maestro.conductoresArreglo);
-    this.card=this.colocarValor()
+    console.log(this.maestro.maestroArreglo);
+
+    this.card=this.colocarValor();
+    this.arregloNuevo = this.maestro.devolverArreglo();
+    this.clickEnBoton();
   }
   limpiar() {
     this.nombres="";
@@ -53,8 +56,15 @@ export class GrillaComponent implements OnInit, OnChanges{
   }
   hizoClickEnEstado() {
     this.dioClickEnEstado.emit(true);
+
   }
   colocarValor(){
-    return this.nombres+''+ this.apellidos+ ''+ this.numeroMedallas + ' ' +this.fechaNacimiento +''+ this.campeonActual;
+
+    return this.nombres+''+ this.apellidos+ '';
+      //+ this.numeroMedallas + ' ' +this.fechaNacimiento +''+ this.campeonActual;
+  }
+
+  clickEnBoton(){
+    return this.nombres;
   }
 }

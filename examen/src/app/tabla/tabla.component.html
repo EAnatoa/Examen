@@ -1,4 +1,4 @@
-<h1>TABLA</h1>
+<h1 align="center">Informacion Maestro</h1>
 <p-table [value]="maestroInterface">
   <ng-template pTemplate="header">
     <tr>
@@ -9,13 +9,15 @@
       <th>Campeon Actual</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-maestroInterface>
-    <tr>
-      <td>{{maestroInterface.nombres}}</td>
-      <td>{{maestroInterface.apellidos}}</td>
-      <td>{{maestroInterface.numeroMedallas}}</td>
-      <td>{{maestroInterface.fechaNacimiento}}</td>
-      <td>{{maestroInterface.campeonActual}}</td>
-    </tr>
+  <ng-template pTemplate="body" let-maestroInterface  *ngFor="let maestro of maestroInterface">
+
+      <tr>
+         <td>{{maestroInterface.nombres}}</td>
+         <td>{{maestroInterface.apellidos}}</td>
+         <td>{{maestroInterface.numeroMedallas}}</td>
+         <td>{{maestroInterface.fechaNacimiento}}</td>
+         <td>{{maestroInterface.campeonActual}}</td>
+       </tr>
+
   </ng-template>
 </p-table>

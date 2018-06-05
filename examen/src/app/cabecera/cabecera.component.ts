@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MaestroService} from "../maestro.service";
+import {Maestro, MaestroService} from "../maestro.service";
 
 @Component({
   selector: 'app-cabecera',
@@ -7,14 +7,20 @@ import {MaestroService} from "../maestro.service";
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent implements OnInit {
-
-
-  constructor(private conductor: MaestroService) { }
+/*
+  constructor(private maestro: MaestroService) { }
 
   ngOnInit() {
   }
 
+}
+*/
+  arregloCarrusel = [];
 
+  constructor(private data:MaestroService ) { }
 
+  ngOnInit() {
+    this.data.mensajeActual.subscribe(mensaje => this.arregloCarrusel = mensaje);
+  }
 
 }

@@ -1,37 +1,38 @@
 import {Component, Input} from '@angular/core';
-import {MaestroService} from "./maestro.service";
+import {Maestro, MaestroService} from "./maestro.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-constructor(condutor: MaestroService){
+  maestroArreglo: Maestro[]=[];
+constructor(maestro: MaestroService){
 }
 
   arregloMaestro=[
     {
-      nombres: 'Arturo Perez',
+      nombres: '      ',
       apellidos:'',
       fechaNacimiento:'',
       numeroMedallas:'',
       campeonActual:'',
       detalles: [
         {
-          chasis: 122,
-          nombreMarca: 'Honda',
-          colorUno: 'Rojo',
-          colorDos: 'Verde',
-          nombreModelo: 'X199',
-          anio: 2015,
-          idConductor: 1
+          numeroPokemon: 122,
+          nombrePokemon: 'Pikachu',
+          poderEspecialUno: 'Electricidad',
+          poderEspecialDos: '',
+          fechaCaptura: '2017/04/09',
+          nivel: 5,
+          entrenadorId: 1
         }
       ]
     },
 ];
-
-
 
   alertar(evento) {
     console.log('Evento: ', evento); // true

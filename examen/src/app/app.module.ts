@@ -15,7 +15,8 @@ import {MaestroService} from "./maestro.service";
 import {ButtonModule} from 'primeng/button';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TablaComponent } from './tabla/tabla.component';
-import {Http, HttpModule} from "@angular/http";
+
+import {CarouselModule} from "primeng/primeng";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +32,12 @@ import {Http, HttpModule} from "@angular/http";
     TableModule,
     ButtonModule,
     NgbModule.forRoot(),
-    HttpModule,
+
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    CarouselModule
   ],
   providers: [MaestroService, GrillaComponent ],
   bootstrap: [AppComponent, CabeceraComponent]

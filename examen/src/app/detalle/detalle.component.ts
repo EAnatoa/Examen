@@ -10,7 +10,7 @@ import {MaestroService} from "../maestro.service";
 export class DetalleComponent implements OnInit , OnChanges{
 botonCargar:string;
 
-  constructor(public maestro: MaestroService) { }
+  constructor(public maestro: MaestroService ) { }
   @Input() numeroPokemon:number;
   @Input() nombrePokemon: string;
   @Input() poderEspecialUno: string;
@@ -18,17 +18,31 @@ botonCargar:string;
   @Input() fechaCaptura:string;
   @Input() nivel: number;
   @Input() entrenadorId:number;
-
+  actorCard = [];
   detalles:string;
+
+  mensaje = [];
+
   ngOnInit() {
     //this.detalles= this.colocarValor();
+    this.maestro.mensajeActual.subscribe(mensaje => this.mensaje = mensaje);
   }
 ngOnChanges(seActualizo){
 
 }
 
+  limpiar1() {
+    this.numeroPokemon=0;
+    this.nombrePokemon="";
+    this.poderEspecialUno="";
+    this.poderEspecialDos="";
+    this.fechaCaptura="";
+    this.nivel=0;
+
+  }
+
 colocarDetalles(textoNumeroPokemon,textoNombrePokemon, textoPoderUno, textoPoderDos, textoFechaCaptura, textoNivel){
-  this.maestro.anadirCondutores(textoNumeroPokemon,textoNombrePokemon, textoPoderUno, textoPoderDos, textoFechaCaptura, textoNivel)
+  //this.maestro.anadirMaestro(textoNumeroPokemon,textoNombrePokemon, textoPoderUno, textoPoderDos, textoFechaCaptura, textoNivel)
   this.detalles=this.colocarValor();
 }
 colocarValor(){

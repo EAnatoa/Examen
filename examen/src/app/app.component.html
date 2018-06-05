@@ -8,21 +8,28 @@
     <app-cabecera>
     </app-cabecera>
   </div>
-  <div class="col-sm-6">
+
+  <div class="col-sm-6"  *ngFor="let maestro of arregloMaestro"  >
+
 
 
     <h1 align="center">Maestro Pokemon</h1>
-    <app-grilla *ngFor="let maestro of arregloMaestro" align="center"
+
+
+    <app-grilla align="center"
         [nombres]="maestro.nombres"
         [apellidos]="maestro.apellidos"
         [fechaNacimiento]="maestro.fechaNacimiento"
         [numeroMedallas]="maestro.numeroMedallas"
         [campeonActual]="maestro.campeonActual"
-        (dioClickEnEstado)="alertar($event)"
+                (dioClickEnEstado)="alertar($event)"
     >
+
     </app-grilla>
 </div>
+
 </div>
+
 
 <app-detalle></app-detalle>
 <app-tabla></app-tabla>
